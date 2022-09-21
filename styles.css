@@ -277,11 +277,13 @@ iframe {
 
   .slide1 img{
     border: solid 1px black;
-    max-height: 50%;
+    width: 80%;
+    display: block;
+    margin: 1em auto;
   }
 
   .slide3 img {
-    width: 60%;
+    width: 55%;
     display: block;
     margin: 1em auto;
   }
