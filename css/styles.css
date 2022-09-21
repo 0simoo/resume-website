@@ -1,0 +1,354 @@
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    font-size: 100%;
+    line-height: 1.7em;
+    color: #000000;
+}
+a{
+    color: #351c75;
+    text-decoration: none;
+}
+a:hover{
+    color:#0F4970;
+    text-decoration: underline;
+}
+.progress-container /* the background for the scroll bar*/{
+    width: 100%;
+    height: 8px;
+    background: #ccc; /* color of scroll bar background */
+}
+.progress-bar /* the scroll bar */ {
+    height: 8px;
+    background: #0F3D3E; /* actual color of said scroll bar */
+    width: 0%;
+}
+
+#top_row h1{
+    color: #0F3D3E;
+    font-size: 2em;
+    letter-spacing: -2px;
+}
+#top_row h3{
+    font-size: 1.125em;
+    font-weight: 400;
+}
+#bio {
+    margin-left: 3em;
+    font-size: .875em;
+}
+#bio a{
+    text-decoration: none;
+    border-bottom: 1px dotted #000000;
+}
+#bio a:hover{
+    color: #0F4970
+}
+table {
+    width: 75%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #075f8a;
+    border-spacing: 3px;
+    margin: auto;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+th {
+    height: 40px;
+    font-weight: bold;
+}
+th,td {
+    padding: 2px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    color: #333333;
+}
+
+#container {
+    width:90%;
+    margin: 10px auto;
+}
+
+#top_row {
+    border-bottom: 1px dotted #ccc;
+    padding: .5em .5em 3em .5em;
+}
+#top_row header {
+    margin-bottom: -2.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #f1f1f1; /* color of top row/nav bar */
+}
+#top_row header h1 {
+    text-align: left;
+    margin-left: 2%;
+}
+#top_row header h3 {
+    text-align: left;
+    margin-left: 2%;
+}
+/* this is the About Me | My Experience thing at the top of the page */
+#top_row nav {
+    float: right;
+    margin-top: -5%;
+    margin-right: 2%;
+}
+#top_row a {
+    font-size: 1.125em;
+    font-weight: 400;
+    padding: 15px;
+    color: #000000;
+}
+#top_row nav a.selected {
+    background: #f6f6f6;
+    color: #bbbbbb;
+    border-radius: 15%;
+}
+#top_row nav a.selected:hover {
+    background: #f6f6f6;
+    color: #bbbbbb;
+}
+#top_row nav a:hover {
+    background: #f6f6f6;
+    color: #0f4970;
+    border-radius: 15%;
+}
+
+#content {
+    float: left;
+    width: 65%;
+    margin: 0;
+    padding: 1em;
+    margin-top: 2%;
+    border-right: 1px dotted #ccc;
+}
+#content h3 {
+    font-family: Georgia, serif;
+    font-size: 1.5em;
+    margin: 30px 0 10px 0;
+    font-weight: normal;
+}
+.picOfMe {
+    float: left;
+    margin: 1em;
+}
+
+#sidebar {
+    float: left;
+    margin-top: 3%;
+    padding: 1em;
+    font-size: .875em;
+}
+#sidebar h3 {
+    font-size: 1.125em;
+    border-bottom: 1px dotted #ccc;
+}
+
+footer {
+    clear: both;/*specificies which side(s) of an element other floating elements are not allowed */
+    margin: 0;
+    padding: .5em;
+    color: #333333;
+    font-variant: small-caps;
+    font-size: .813em;
+    text-align: center;
+    border-top: 1px dotted #cccccc;
+}
+
+form {
+    width: 75%;
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #075f8a;
+    padding: 10px;
+}
+legend {
+    font-weight: bold;
+    margin: auto;
+    color: #666666;
+    margin-bottom: 5px;
+}
+label {
+    font-weight: bold;
+    margin: auto;
+}
+
+html {overflow-y: scroll}
+
+#courselist {
+    clear:both;
+}
+
+iframe {
+    float: left;
+    margin: auto;
+}
+
+/* .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  } */
+
+  /* Accordion content text */
+  #accordion .ui-accordion-content {
+    background-color: #f3f3f3;
+
+    font-size: 10pt;
+    line-height: 16pt;
+  }
+  /* Accordion header text */
+  #accordion .ui-accordion-header {
+    background-color: #cccccc;
+    margin: 0px;
+    color: #075f8a;
+    border-color: black;
+  }
+
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 22%;
+    height: 700px;
+  }
+  
+  /* Tab buttons */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Tab content */
+  .tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 700px;
+  }
+  
+  /* Tab button text */
+.tablinks {
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+}
+
+
+/* Slideshow container */
+.slideshow {
+    width: auto;
+    height: auto; 
+    margin: 0 auto;
+
+  }
+
+  .slide1 img{
+    border: solid 1px black;
+  }
+
+  .slide3 img {
+    width: 60%;
+    display: block;
+    margin: 1em auto;
+  }
+  
+  /* Hide the images by default */
+  .slide {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .slidePrev, .slideNext {
+    cursor: pointer;
+    padding: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+  }
+  .slideButtonL {
+    position: absolute;
+    float: left;
+  }
+  .slideButtonR {
+    float:right;
+  }
+  
+  /* Next & prev buttons change background color when hovered over */
+  .slidePrev:hover, .slideNext:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* The dots for the slides */
+  .slideDot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+
+  }
+
+  .slideDots3 {
+    width: fit-content ;
+    margin: 0 auto;
+  }
+  
+  .dotActive, .slideDot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  
+  /* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
