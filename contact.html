@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="author" content="Simon Shin">
+        <meta name="keywords" content="Carnegie Mellon Univserity, Information Systems">
+        <meta name="description" content="Simon Shin resume website">
+        <link rel="stylesheet" type="text/css" href=" css/styles.css"/>
+        <title>Simon Shin resume website</title>
+
+        <link rel="stylesheet" media="all" type="text/css" href="css/styles.css"/>
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+        <script>
+            $(function() {
+                $('#container-graph').highcharts({
+                    chart: {
+        type: 'line'
+    },
+    title: {
+        text: 'Weekly Workload by Month'
+    },
+    subtitle: {
+        text: 'in hours per week'
+    },
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+    yAxis: {
+        title: {
+            text: 'Average Number of Hours Worked on School Each Week'
+        }
+    },
+    plotOptions: {
+        line: {
+            dataLabels: {
+                enabled: true
+            },
+            enableMouseTracking: false
+        }
+    },
+    series: [{
+        name: '2021',
+        data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+    }, {
+        name: '2022',
+        data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+    }]
+});
+            });
+        </script>
+    </head>
+    <body>
+        <div id="container">
+        <div id="top_row">
+        <header>
+            <h1>Simon Shin</h1>
+            <h3>Carnegie Mellon Univserity, Information Systems, Dietrich & Heinz</h3>
+        </header>
+        <nav>
+            <a href="index.html">About Me</a>
+            <a href="experience.html">My Experience</a>
+            <a class="selected" href="contact.html">Contact Info</a>
+        </nav>
+        </div>
+        <div id="content">
+            <h3>Contact</h3>
+            <p>Please check when I'm free</p>
+            <div id="container-graph"></div>
+            <p>Please use the below form to get in touch with me.</p>
+            
+            <form onsubmit="return validate()">
+                <fieldset>
+                    <legend>Tell me more about yourself</legend>
+                    <label for="name">Name:</label><br>
+                    <input size="20" maxlength="250" type="text" id="name" name="name" value="Your Name">
+                    <br/><br/>
+                    <label for="txtDate">Your date of birth:</label><br>
+                    <input type="date" id="txtDate" name="txtDate" value="" size="20" required><br/><br/>
+
+        
+                </fieldset>
+                <fieldset>
+                    <legend>Tell me about your preferences</legend>
+                    <label for="flowers">Your favorite flower color:</label><br>
+                    <input type="color" id="flowers" name="flowers">
+                    <br/><br/>
+                    <label for="message">Message:</label><br>
+                    <textarea maxlength="1000" id="message" name="message" rows="10" cols="50"></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Let's stay in touch</legend>
+                    <label for="source">How did you find out about me?</label>
+                    <select id="source">
+                        <option value="Google" selected>Google</option>
+                        <option value="News">News Article</option>
+                        <option value="Friend">Friend</option>
+                        <option value="Other">Other</option>
+                    </select><br/><br/>
+
+                    <label for="update">Please indicate if you want to receive updates via email:</label>
+                    <input type="checkbox" id="update" name="update" value="Yes, please update me!">
+                    <br/><br/>
+                    <label for="email">Please provide your email address:</label><br/>
+                    <input type="email" id="email" name="email" placeholder="abc@defg.com" required>
+                    <br/><br/>
+                    <label for="password">Choose a password:</label><br>
+                    <input type="password" id="password" name="password" size="20"><br/>
+                    <br/><br/>
+                    <label for="phone">Please provide your phone number (no dashes or spaces):</label><br/>
+                    <input type="text" id="phone" name="phone" value="" required><br/><br/>
+        
+                </fieldset>
+                <fieldset>
+              <input type ="image" src="images/submit.png" alt="Submit" name= "btnimage">
+                </fieldset>
+        </form>
+            </div>
+            <div id="sidebar">
+                <h3>Contact</h3>
+                <p>Please use the below map to find me</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3036.441868132293!2d-79.9445471!3d40.4433561!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xda48a58e3e3ee1fb!2sWean%20Hall!5e0!3m2!1sen!2sus!4v1647876025998!5m2!1sen!2sus" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <br/>
+                <strong>Simon Shin</strong><br>
+                <a href="http://www.cmu.edu" target="_blank">Carnegie Mellon University</a><br>
+                307 oxbridge ct<br>
+                Pittsburgh, PA 15238<br>
+                412-736-4006 (c)<br><br>
+                <a href="mailto:donghyus@andrew.cmu.edu"><img src="images/email.png" alt="Email Icon"></a>
+                <a href="https://www.linkedin.com/in/simon-shin-596a88228/"><img src="images/linkedin.png" alt="LinkedIn Logo"></a>
+                <a href="https://www.facebook.com/profile.php?id=100073473767165"><img src="images/facebook.png" alt="Facebook Logo"></a>
+            </div>
+        <footer>
+            <hr>
+            &copy; Simon Shin <br>
+        </footer>
+        </div>
+    </body>
+</html>
