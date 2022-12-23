@@ -287,6 +287,17 @@ iframe {
     display: block;
     margin: 1em auto;
   }
+
+  .slide4 img {
+    width: 100%;
+    display: block;
+    margin: 1em auto;
+  }
+  .slide5 img {
+    width: 100%;
+    display: block;
+    margin: 1em auto;
+  }
   
   /* Hide the images by default */
   .slide {
@@ -329,7 +340,7 @@ iframe {
 
   }
 
-  .slideDots3 {
+  .slideDotsDiv {
     width: fit-content ;
     margin: 0 auto;
   }
