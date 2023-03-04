@@ -127,7 +127,7 @@ th,td {
     border-right: 1px dotted #ccc;
 }
 #content h3 {
-    font-family: Georgia, serif;
+    /* font-family: Georgia, serif; */
     font-size: 1.5em;
     margin: 30px 0 10px 0;
     font-weight: normal;
