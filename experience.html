@@ -42,6 +42,7 @@
                 <button class="tablinks" onclick="openProject(event, 'Othello')">Othello Gameboard</button>
                 <button class="tablinks" onclick="openProject(event, 'santo')">Fullstack Santorini</button>
                 <button class="tablinks" onclick="openProject(event, 'dataVis')">Data Framework</button>
+                <button class="tablinks" onclick="openProject(event, 'cafe23')">Cafe23</button>
             </div>
 
             <!-- Tab Content -->
@@ -175,6 +176,7 @@
                     </div>
                 </div>
             </div>
+            
             <div id="dataVis" class="tabcontent">
                 <h3>Data Visualization Framework and Plugins</h3>
                 <p> - Worked within a team to design and implement a black-box framework with plugin interfaces for a variety of data sources and visualizations <br>
@@ -201,6 +203,38 @@
                         <span class="slideDot5 slideDot" onclick="setSlide(1,4)"></span>
                         <span class="slideDot5 slideDot" onclick="setSlide(2,4)"></span>
                         <span class="slideDot5 slideDot" onclick="setSlide(3,4)"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cafe23" class="tabcontent">
+                <h3>Cafe23 Management System</h3>
+                <p> - Developed and tested a web application to help manage a set of fictional stores and cafes, primarily using Ruby on Rails and MaterializeCSS <br>
+                    - Used model-view-controller design pattern extensively and covered topics in authorization/authentication, visual design, unit testing, and more <br>
+                    - Built RESTful API that fetched information about employees, payrolls, stores, etc. in real time <br>
+                    - Designed and developed hi-fi wireframes for two different business dashboards <br>
+                    </p>
+                    
+                <div class="slideshow">
+                    <div class="slide6 fade">
+                        <img src="images/cafe1.png" alt="img6.1" style="width:100%">
+                    </div>
+                    <div class="slide6 fade">
+                        <img src="images/cafe2.png" alt="img6.1" style="width:100%">
+                    </div>
+                    <div class="slide6 fade">
+                        <img src="images/cafe3.png" alt="img6.1" style="width:100%">
+                    </div>
+                    <div class="slideButtonL">
+                        <a class="slidePrev" onclick="plusSlides(-1, 5)">❮</a>
+                    </div>
+                    <div class="slideButtonR">
+                        <a class="slideNext" onclick="plusSlides(1, 5)">❯</a>
+                    </div>
+                    <div class="slideDotsDiv">
+                        <span class="slideDot6 slideDot" onclick="setSlide(1,5)"></span>
+                        <span class="slideDot6 slideDot" onclick="setSlide(2,5)"></span>
+                        <span class="slideDot6 slideDot" onclick="setSlide(3,5)"></span>
                     </div>
                 </div>
             </div>
@@ -349,14 +383,15 @@
         </script>
 
         <script>
-            let slideIndex = [1,1,1,1,1];
-            let slideId = ["slide1", "slide2", "slide3", "slide4", "slide5"]
-            let dotsId = ["slideDot1", "slideDot2", "slideDot3", "slideDot4", "slideDot5"]
+            let slideIndex = [1,1,1,1,1,1];
+            let slideId = ["slide1", "slide2", "slide3", "slide4", "slide5", "slide6"]
+            let dotsId = ["slideDot1", "slideDot2", "slideDot3", "slideDot4", "slideDot5", "slideDot6"]
             showSlides(1, 0);
             showSlides(1, 1);
             showSlides(1, 2);
             showSlides(1, 3);
             showSlides(1, 4);
+            showSlides(1, 5);
             
             function plusSlides(n, no) {
             showSlides(slideIndex[no] += n, no);
@@ -368,19 +403,19 @@
             }
             
             function showSlides(n, no) {
-            let slides = document.getElementsByClassName(slideId[no]);
-            let dots = document.getElementsByClassName(dotsId[no]);
+                let slides = document.getElementsByClassName(slideId[no]);
+                let dots = document.getElementsByClassName(dotsId[no]);
 
-            if (n > slides.length) {slideIndex[no] = 1}    
-            if (n < 1) {slideIndex[no] = slides.length}
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            for (let j = 0; j < dots.length; j++){
-                dots[j].className = dots[j].className.replace(" dotActive", "");
-            }
-            slides[slideIndex[no]-1].style.display = "block";
-            dots[slideIndex[no]-1].className += " dotActive";
+                if (n > slides.length) {slideIndex[no] = 1}    
+                if (n < 1) {slideIndex[no] = slides.length}
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (let j = 0; j < dots.length; j++){
+                    dots[j].className = dots[j].className.replace(" dotActive", "");
+                }
+                slides[slideIndex[no]-1].style.display = "block";
+                dots[slideIndex[no]-1].className += " dotActive";
             }
         </script>
     </body>
