@@ -1,142 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta name="author" content="Simon Shin">
-        <meta name="keywords" content="Carnegie Mellon Univserity, Information Systems">
-        <meta name="description" content="Simon Shin resume website">
-        <link rel="stylesheet" type="text/css" href=" css/styles.css"/>
-        <title>Simon Shin resume website</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Simon Shin">
+    <meta name="keywords" content="Carnegie Mellon Univserity, Information Systems">
+    <meta name="description" content="Simon Shin resume website">
+    <link rel="stylesheet" type="text/css" href=" css/styles.css" />
+    <title>Simon Shin resume website</title>
+    <link rel="stylesheet" media="all" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+      $(function() {
+        $("#accordion").accordion({
+          heightStyle: "content"
+        });
+      });
+    </script>
+    <script>
+      /* on scroll, activate my function */
+      window.onscroll = function() {
+        myFunction()
+      };
 
-        <link rel="stylesheet" media="all" type="text/css" href="css/styles.css"/>
-        <link rel="stylesheet" media="all" type="text/css" href="css/jquery-ui.css"/>
-        
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
-        <script src="js/scripts.js"></script>
-
-        <script>
-            $(function() {
-                $( "#accordion" ).accordion({ 
-                    heightStyle: "content"
-                });
-            });
-        </script>
-        <script>
-            /* on scroll, activate my function */
-            window.onscroll = function() {myFunction()};
-
-            function myFunction(){
-                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                var scrolled = (winScroll / height) * 100;
-                document.getElementById("myBar").style.width = scrolled + "%";
-            }
-        </script>
-        
-    </head>
-    <body>
-        <div id="container">
-        <div id="top_row">
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="top_row">
         <header>
-            <h1>Simon Shin</h1>
-            <h3>Carnegie Mellon Univserity, Information Systems, Dietrich & Heinz</h3>
-            <div class="progress-container">
-                <div class="progress-bar" id="myBar"></div>
-            </div>
-            <nav>
-                <a class = "selected" href="index.html">About Me</a> |
-                <a href="experience.html">My Experience</a>
-            </nav>
+          <h1>Simon Shin</h1>
+          <h3>Carnegie Mellon Univserity, Information Systems, Dietrich & Heinz</h3>
+          <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+          </div>
+          <!-- <nav>
+            <a class="selected" href="index.html">About Me</a> | <a href="experience.html">My Experience</a>
+          </nav> -->
         </header>
+      </div>
+      <div id="content">
+        <h3>About</h3>
+        <img class="picOfMe" src="images/IMG_8949.jpg" alt="Simon's photo" style="width:500px;" />
+        <div id="bio">
+          <p> My name is Simon Shin, but you might see my name as Dong Hyun Shin as well. I'm currently a Carnegie Mellon University junior majoring in information systems with a focus on computer science and software engineering. </p>
         </div>
-        <div id="content">
-            <h3>About</h3>
-            <img class="picOfMe" src="images/IMG_8949.jpg" alt="Simon's photo" style="width:500px;height:350px"/>
-            <div id="bio">
-            <p>
-                My name is Simon Shin, but you might see my name as Dong Hyun Shin as well. I'm currently a Carnegie Mellon University 
-                sophmore majoring in information systems with a focus on computer science and software engineering.
-            </p>
-            </div>
-            <h4 id="courselist">Relevant Coursework</h4>
-            <div id="accordion">
-                <h4>Parallel and Sequential Data Structures and Algorithms, 15-210</h4>
-                <div><p>
-                    Teaches how to design, analyze, and program algorithms and data structures with a functional programming language. <br>
-                    Class focus on analyzing algorithms with an emphasis on parallelism. <br>
-                    Covered topics in parallel programming, generating and analyzing algorithms, higher order programming, practical applications - data analysis, graphics, text processing.
-                </p></div>
-                <h4>Application Design and Development, 67-272</h4>
-                <div><p>
-                    Information Systems course on the design and development process of software applications. <br>
-                    Involved a semester long course project where students developed a web app. <br>
-                    Key topics covered include the Model-View-Controller pattern, how to design/develop relational databases, 
-                    how to ensure technical quality in software development, and how to apply principles of user centered design. <br>
-                    Worked with Ruby/Ruby on rails and HTML/CSS.
-                </p></div>
-
-                <h4>Principles of Software Construction: Objects, Design, and Concurrency, 17-214</h4>
-                <div><p>
-                    This course teaches principles and skills to design and build software systems at scale. <br>
-                    The course covers technical topics in four areas: (1) design concepts for complex systems, 
-                    (2) object oriented programming, (3) techniques for robustness, including testing and static 
-                    and dynamic analysis for programs, and (4) concurrent software systems.<br>
-                    Worked mainly with Java and TypeScript.
-                </p></div>
-                <h4>Database Design and Development, 67-262</h4>
-                <div><p>
-                    Information Systems course that focuses on the principles of database management systems, 
-                    their design, and development.<br> Key topics include relational database models, 
-                    database design, SQL, programming interfaces, database transactions, integrity constraints, security, 
-                    and non-relational database models. Made use of SQL and MongoDB.
-                </p></div>
-                <h4>Principles of Functional Programming, 15-150</h4>
-                <div><p>
-                    A programming class focused on the functional model of programming and mainly used SML in assignments. 
-                    Covered topics such as recursion, work/span analysis, polymorphism, higher-order functions, and more.
-                </p></div>
-                <h4>Principles of Imperative Computation, 15-122</h4>
-                <div><p>
-                    An introductory programming class that covered various data structures such as hash tables, linked lists, 
-                    and binary search trees. Worked mainly with C for assignments.
-                </p></div>
-                <h4>Information Systems Milieux, 67-250</h4>
-                <div><p>
-                    An introductory course to information systems that covered a wide variety of topics such as business analysis,
-                     web development, and data manipulation. Worked mainly with HTML, CSS, and SQL for assignments.
-                </p></div>
-                <h4>Designing Human Centered Software, 05-391</h4>
-                <div><p>
-                    Human-Computer Interactions (HCI) class on designing, prototyping, and evaluating user interfaces. <br>
-                    Covered both practical and theoretical ideas in HCI and involved multiple group projects where students designed and devoloped UI/UX.
-                </p></div>
-                <h4>Concepts of Mathematics, 21-127</h4>
-                <div><p>
-                    A mathematics course with a focus on preseting informal logic and mathematical proofs. 
-                    Discussed topics such as induction and equivalence relations.
-                </p></div>
-                </div>
-            
-            <!-- <h4 id="resume">My Resume</h4>
-            <iframe id="PDFViewer" src="Resume-DongHyunShin.pdf" width="100%" height="750">
+        <!-- <h4 id="resume">My Resume</h4><iframe id="PDFViewer" src="Resume-DongHyunShin.pdf" width="100%" height="750">
                 Ran into an error when viewing PDF. Please download the PDF to view it: 
                 <a href="Resume-DongHyunShin.pdf">Download PDF</a></iframe> -->
-        </div> 
-        <div id="sidebar">
-            <h3>Contact</h3>
-            <strong>Simon Shin</strong><br>
-            <a href="http://www.cmu.edu" target="_blank">Carnegie Mellon University</a><br>
-            307 oxbridge ct<br>
-            Pittsburgh, PA 15238<br>
-            412-736-4006 (c)<br><br>
-            <a href="mailto:donghyus@andrew.cmu.edu"><img src="images/email.png" alt="Email Icon"></a>
-            <a href="https://www.linkedin.com/in/simon-shin-596a88228/"><img src="images/linkedin.png" alt="LinkedIn Logo"></a>
-            <!-- <a href="https://www.facebook.com/profile.php?id=100073473767165"><img src="images/facebook.png" alt="Facebook Logo"></a> -->
+      </div>
+      <div id="sidebar">
+        <h3>Contact</h3>
+        <strong>Simon Shin</strong>
+        <br>
+        <a href="http://www.cmu.edu" target="_blank">Carnegie Mellon University</a>
+        <br> 307 oxbridge ct <br> Pittsburgh, PA 15238 <br> 412-736-4006 (c) <br>
+        <br>
+        <a href="mailto:donghyus@andrew.cmu.edu">
+          <img src="images/email.png" alt="Email Icon">
+        </a>
+        <a href="https://www.linkedin.com/in/simon-shin-596a88228/">
+          <img src="images/linkedin.png" alt="LinkedIn Logo">
+        </a>
+        <!-- <a href="https://www.facebook.com/profile.php?id=100073473767165"><img src="images/facebook.png" alt="Facebook Logo"></a> -->
+      </div>
+      <div id="experience">
+        <h3>Experience</h3>
+        <div class="tab">
+          <button class="tablinks" onclick="openProject(event, 'dataVis')" id="defaultOpen">Data Framework</button>
+          <button class="tablinks" onclick="openProject(event, 'Phishing')">Phishing Walkthrough</button>
+          <button class="tablinks" onclick="openProject(event, 'WebDev')">Web Dev Project</button>
+          <button class="tablinks" onclick="openProject(event, 'Othello')">Othello Gameboard</button>
+          <button class="tablinks" onclick="openProject(event, 'santo')">Fullstack Santorini</button>
+          <button class="tablinks" onclick="openProject(event, 'cafe23')">Cafe23</button>
         </div>
-        <footer>
-            &copy; Simon Shin
-        </footer>
+        <!-- Tab Content -->
+        <div id="Phishing" class="tabcontent">
+          <h3>Phishing Walkthrough</h3>
+          <p> - Created a walk-through interactive quiz that trained users on how to recognize phishing emails using Processing sketchbook <br> - Won Duquesne University’s Department of Mathematics and Computer Science Award at Pennsylvania Junior Academy of Science 2019 <br>
+          </p>
+          <br>
+          <div class="slideshow">
+            <div class="slide1 fade">
+              <img class="slideImage" src="images/3redphishbluephish.png" style="width: 100%;" alt="img1.1">
+            </div>
+            <div class="slide1 fade">
+              <img class="slideImage" src="images/2phish.png" style="width: 100%;" alt="img1.2">
+            </div>
+            <div class="slide1 fade">
+              <img class="slideImage" src="images/1phish.png" style="width: 100%" alt="img1.3">
+            </div>
+          </div>
+          <br>
+          <div class="slideButtonL">
+            <a class="slidePrev" onclick="plusSlides(-1, 0)">❮</a>
+          </div>
+          <div class="slideButtonR">
+            <a class="slideNext" onclick="plusSlides( 1, 0)">❯</a>
+          </div>
+          <div class="slideDotsDiv">
+            <span class="slideDot1 slideDot" onclick="setSlide(1,0)"></span>
+            <span class="slideDot1 slideDot" onclick="setSlide(2,0)"></span>
+            <span class="slideDot1 slideDot" onclick="setSlide(3,0)"></span>
+          </div>
         </div>
-    </body>
+        <div id="WebDev" class="tabcontent">
+          <h3>Web Dev Project</h3>
+          <p> - Built a front-end website for a mock restaurant <br> - Covered topics in web accessibility, user testing, and design documentation <br> - Used HTML, CSS, JavaScript, and jQuery libraries <br>
+          </p>
+          <div class="slideshow">
+            <div class="slide2 fade">
+              <img src="images/pamela1.png" alt="img2.1" style="width:100%">
+            </div>
+            <div class="slide2 fade">
+              <img src="images/pamela2.png" alt="img2.2" style="width: 100%;">
+            </div>
+            <div class="slide2 fade">
+              <img src="images/pamela3.png" alt="img2.3" style=" width: 100%;">
+            </div>
+            <div class="slideButtonL">
+              <a class="slidePrev" onclick="plusSlides(-1, 1)">❮</a>
+            </div>
+            <div class="slideButtonR">
+              <a class="slideNext" onclick="plusSlides(1, 1)">❯</a>
+            </div>
+          </div>
+          <br>
+          <div class="slideDotsDiv">
+            <span class="slideDot2 slideDot" onclick="setSlide(1,1)"></span>
+            <span class="slideDot2 slideDot" onclick="setSlide(2,1)"></span>
+            <span class="slideDot2 slideDot" onclick="setSlide(3,1)"></span>
+          </div>
+        </div>
+        <div id="Othello" class="tabcontent">
+          <h3>Othello Gameboard</h3>
+          <p> - Developed a 2 person board game with move history and undo/redo functionality <br> - Usage of Java and Java Swing GUI elements </p>
+          <div class="slideshow">
+            <div class="slide3 fade">
+              <img src="images/othello1.png" alt="img3.1">
+            </div>
+            <div class="slide3 fade">
+              <img src="images/othello2.png" alt="img3.2">
+            </div>
+            <div class="slide3 fade">
+              <img src="images/othello3.png" alt="img3.3">
+            </div>
+            <div class="slideButtonL">
+              <a class="slidePrev" onclick="plusSlides(-1, 2)">❮</a>
+            </div>
+            <div class="slideButtonR">
+              <a class="slideNext" onclick="plusSlides(1, 2)">❯</a>
+            </div>
+            <div class="slideDotsDiv">
+              <span class="slideDot3 slideDot" onclick="setSlide(1,2)"></span>
+              <span class="slideDot3 slideDot" onclick="setSlide(2,2)"></span>
+              <span class="slideDot3 slideDot" onclick="setSlide(3,2)"></span>
+            </div>
+          </div>
+        </div>
+        <div id="santo" class="tabcontent">
+          <h3>Fullstack Santorini game</h3>
+          <p> - Developed a full-stack web-based implementation of a board game using Java and TypeScript <br> - Built back-end server using NanoHttpd and front-end with React <br> - Covered topics in extensibility and separation of GUI and core <br>
+          </p>
+          <div class="slideshow">
+            <div class="slide4 fade">
+              <img src="images/santorini1.png" alt="img4.1">
+            </div>
+            <div class="slide4 fade">
+              <img src="images/santorini2.png" alt="img4.2">
+            </div>
+            <div class="slide4 fade">
+              <img src="images/santorini3.png" alt="img4.3">
+            </div>
+            <div class="slideButtonL">
+              <a class="slidePrev" onclick="plusSlides(-1, 3)">❮</a>
+            </div>
+            <div class="slideButtonR">
+              <a class="slideNext" onclick="plusSlides(1, 3)">❯</a>
+            </div>
+            <div class="slideDotsDiv">
+              <span class="slideDot4 slideDot" onclick="setSlide(1,3)"></span>
+              <span class="slideDot4 slideDot" onclick="setSlide(2,3)"></span>
+              <span class="slideDot4 slideDot" onclick="setSlide(3,3)"></span>
+            </div>
+          </div>
+        </div>
+        <div id="dataVis" class="tabcontent">
+          <h3>Data Visualization Framework and Plugins</h3>
+          <p> - Collaboratively designed a black-box data visualization framework that could accept custom plugins for a variety of data sources and visualizations <br> - Made additional plugins for another team’s framework, coordinating between teams on the design and development process <br>
+          </p>
+          <div class="slideshow">
+            <div class="slide5 fade">
+              <img src="images/data1.png" alt="img5.1">
+            </div>
+            <div class="slide5 fade">
+              <img src="images/data2.png" alt="img5.2">
+            </div>
+            <div class="slide5 fade">
+              <img src="images/data3.png" alt="img5.3">
+            </div>
+            <div class="slideButtonL">
+              <a class="slidePrev" onclick="plusSlides(-1, 4)">❮</a>
+            </div>
+            <div class="slideButtonR">
+              <a class="slideNext" onclick="plusSlides(1, 4)">❯</a>
+            </div>
+            <div class="slideDotsDiv">
+              <span class="slideDot5 slideDot" onclick="setSlide(1,4)"></span>
+              <span class="slideDot5 slideDot" onclick="setSlide(2,4)"></span>
+              <span class="slideDot5 slideDot" onclick="setSlide(3,4)"></span>
+            </div>
+          </div>
+        </div>
+        <div id="cafe23" class="tabcontent">
+          <h3>Cafe23 Management System</h3>
+          <p> - Helped manage a set of fictional stores and cafes by developing and testing a web application primarily using Ruby on Rails and MaterializeCSS <br> - Covered topics in authorization/authentication, visual design, unit testing, and more <br> - Built RESTful API that fetched information about employees, payrolls, stores, etc. in real time <br>
+          </p>
+          <div class="slideshow">
+            <div class="slide6 fade">
+              <img src="images/cafe1.png" alt="img6.1" style="width:100%">
+            </div>
+            <div class="slide6 fade">
+              <img src="images/cafe2.png" alt="img6.1" style="width:100%">
+            </div>
+            <div class="slide6 fade">
+              <img src="images/cafe3.png" alt="img6.1" style="width:100%">
+            </div>
+            <div class="slideButtonL">
+              <a class="slidePrev" onclick="plusSlides(-1, 5)">❮</a>
+            </div>
+            <div class="slideButtonR">
+              <a class="slideNext" onclick="plusSlides(1, 5)">❯</a>
+            </div>
+            <div class="slideDotsDiv">
+              <span class="slideDot6 slideDot" onclick="setSlide(1,5)"></span>
+              <span class="slideDot6 slideDot" onclick="setSlide(2,5)"></span>
+              <span class="slideDot6 slideDot" onclick="setSlide(3,5)"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer> &copy; Simon Shin </footer>
+    </div>
+    <script>
+      /* scroll bar function */
+      /* on scroll, activate my function */
+      window.onscroll = function() {
+        myFunction()
+      };
+
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+    </script>
+    <script>
+      /* regular tabs function */
+      $(function() {
+        $("#tabs").tabs({
+          event: "click"
+        });
+      });
+    </script>
+    <script>
+      /* lightbox function */
+      $(function() {
+        $('#gallery a').lightBox();
+      });
+    </script>
+    <script>
+      /* vertical tabs function */
+      function openProject(evt, projectName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(projectName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+    <script>
+      let slideIndex = [1, 1, 1, 1, 1, 1];
+      let slideId = ["slide1", "slide2", "slide3", "slide4", "slide5", "slide6"]
+      let dotsId = ["slideDot1", "slideDot2", "slideDot3", "slideDot4", "slideDot5", "slideDot6"]
+      showSlides(1, 0);
+      showSlides(1, 1);
+      showSlides(1, 2);
+      showSlides(1, 3);
+      showSlides(1, 4);
+      showSlides(1, 5);
+
+      function plusSlides(n, no) {
+        showSlides(slideIndex[no] += n, no);
+      }
+
+      function setSlide(n, no) {
+        slideIndex[no] = n;
+        showSlides(n, no);
+      }
+
+      function showSlides(n, no) {
+        let slides = document.getElementsByClassName(slideId[no]);
+        let dots = document.getElementsByClassName(dotsId[no]);
+        if (n > slides.length) {
+          slideIndex[no] = 1
+        }
+        if (n < 1) {
+          slideIndex[no] = slides.length
+        }
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (let j = 0; j < dots.length; j++) {
+          dots[j].className = dots[j].className.replace(" dotActive", "");
+        }
+        slides[slideIndex[no] - 1].style.display = "block";
+        dots[slideIndex[no] - 1].className += " dotActive";
+      }
+    </script>
+  </body>
 </html>
